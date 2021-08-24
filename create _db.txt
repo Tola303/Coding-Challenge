@@ -1,0 +1,40 @@
+#!/bin/bash
+
+
+https://www2.census.gov/programs-surveys/popest/datasets/2010-2016/national/totals/nst-est2016-alldata.csv
+pop_db_processor=""
+wget=$(which get)
+
+
+
+
+db_name="popdb"
+db_user="pop-user"
+db_pwd="pop-pw
+
+#download file
+function download_files() {
+	echo "downloading files..."
+	pop_db_processor= $($wget https://www2.census.gov/programs-surveys/popest/datasets/2010-2016/national/totals/nst-est2016-alldata.csv
+	
+	#parse the file
+	cat $pop_db_processor | sed ld | cut -d -f
+
+#Create database and create table
+fucntion setup_database() {
+	echo "setting database..."
+	echo -n "enter pop-user password: "
+	read pop-pw
+	sudo mysql -u$db_user -p${pop-pw} << MYSQL
+CREATE DATABASE $db_name;
+USE $db_name;
+CREATE TABLE $pop_table
+
+
+
+#import file into database
+function import_pop() {
+	echo "import into table..."
+	cat $port_db_processor} | while IFS=$',' read col
+	
+}
